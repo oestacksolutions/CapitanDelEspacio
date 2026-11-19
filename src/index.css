@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+@theme {
+  --color-Capitán-red: #b91c1c;
+  --color-Capitán-red-dark: #7f1d1d;
+  --color-Capitán-gold: #eab308;
+  --color-Capitán-gold-light: #fef08a;
+  --color-Capitán-dark: #0f1115;
+  --color-Capitán-surface: #181b22;
+  --color-Capitán-cream: #faf7f0;
+  --font-display: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: var(--color-Capitán-dark);
+    color: var(--color-Capitán-cream);
+  }
+
+  body {
+    margin: 0;
+    font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: var(--color-Capitán-dark);
+    color: var(--color-Capitán-cream);
+  }
+
+  .font-display {
+    font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* Fondo histórico modernizado con guarda izquierda de Capitán del Espacio */
+.Capitán-heritage-bg {
+  background-color: #c8974b;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(244, 218, 158, 0.12) 0%,
+      rgba(214, 168, 96, 0.25) 35%,
+      rgba(166, 116, 50, 0.45) 100%
+    ),
+    url("./assets/fondo/fondo.webp");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+}
+
+@media (min-width: 1024px) {
+  .Capitán-heritage-bg {
+    background-attachment: fixed;
+    background-size: auto 100%;
+  }
+}
+
+/* Botón estilo cinta (ribbon) Capitán del Espacio */
+.Capitán-ribbon-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.35rem;
+  background: linear-gradient(180deg, #fcf2dc 0%, #edd7a6 100%);
+  color: #8b1d1d;
+  border-top: 1px solid rgba(234, 179, 8, 0.8);
+  border-bottom: 1px solid rgba(234, 179, 8, 0.8);
+  box-shadow:
+    0 10px 22px rgba(0, 0, 0, 0.55),
+    inset 0 3px 0 #fcf2dc,
+    inset 0 5px 0 #4d8a73,
+    inset 0 -3px 0 #edd7a6,
+    inset 0 -5px 0 #4d8a73;
+  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+  z-index: 1;
+}
+
+/* Pliegues traseros inferiores */
+.Capitán-ribbon-btn::before,
+.Capitán-ribbon-btn::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  width: 14px;
+  height: 7px;
+  background: #6b2b18;
+  z-index: -1;
+}
+
+.Capitán-ribbon-btn::before {
+  left: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.Capitán-ribbon-btn::after {
+  right: 0;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+/* Colas de golondrina laterales */
+.Capitán-ribbon-tail-left,
+.Capitán-ribbon-tail-right {
+  position: absolute;
+  bottom: -7px;
+  width: 18px;
+  height: 100%;
+  background: linear-gradient(180deg, #f3e4c3 0%, #dfd0aa 100%);
+  z-index: -2;
+  pointer-events: none;
+  transition: transform 0.2s ease;
+}
+
+.Capitán-ribbon-tail-left {
+  left: -13px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 36% 50%);
+}
+
+.Capitán-ribbon-tail-right {
+  right: -13px;
+  clip-path: polygon(0 0, 100% 0, 64% 50%, 100% 100%, 0 100%);
+}
+
+.Capitán-ribbon-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+  box-shadow:
+    0 14px 26px rgba(0, 0, 0, 0.65),
+    0 0 16px rgba(234, 179, 8, 0.35),
+    inset 0 3px 0 #fcf2dc,
+    inset 0 5px 0 #4d8a73,
+    inset 0 -3px 0 #edd7a6,
+    inset 0 -5px 0 #4d8a73;
+}
+
+.Capitán-ribbon-btn:active {
+  transform: translateY(0);
+}
+
+/* Etiqueta estática estilo cinta para el Hero */
+.Capitán-ribbon-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 1.2rem;
+  background: linear-gradient(180deg, #fcf2dc 0%, #edd7a6 100%);
+  color: #8b1d1d;
+  border-top: 1px solid rgba(234, 179, 8, 0.8);
+  border-bottom: 1px solid rgba(234, 179, 8, 0.8);
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.45),
+    inset 0 2px 0 #fcf2dc,
+    inset 0 4px 0 #4d8a73,
+    inset 0 -2px 0 #edd7a6,
+    inset 0 -4px 0 #4d8a73;
+  z-index: 1;
+}
+
+.Capitán-ribbon-badge::before,
+.Capitán-ribbon-badge::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  width: 12px;
+  height: 6px;
+  background: #6b2b18;
+  z-index: -1;
+}
+
+.Capitán-ribbon-badge::before {
+  left: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.Capitán-ribbon-badge::after {
+  right: 0;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+/* Fix compatibilidad Leaflet con Tailwind v4 Preflight */
+.leaflet-container img,
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+  max-width: none !important;
+  max-height: none !important;
+}
