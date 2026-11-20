@@ -125,26 +125,26 @@ export default function Footer() {
             © {currentYear} {COMPANY_INFO.companyName}. Todos los derechos reservados.
           </p>
 
-          {/* Cinta miniatura con borde negro clickeable hacia Oestack */}
+          {/* Cinta fina limpia clickeable hacia Oestack */}
           <a
             href="https://oestack.com"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Diseñado y desarrollado por Oestack"
-            className="order-3 md:order-2 group relative inline-flex items-center justify-center px-2.5 py-0.5 drop-shadow-[0_0_1px_rgba(38,17,10,0.95)] transition-transform duration-200 hover:-translate-y-0.5 focus:outline-none"
+            className="order-3 md:order-2 group relative inline-flex items-center justify-center mx-2 py-0.5 transition-transform duration-200 hover:-translate-y-0.5 focus:outline-none"
           >
             {/* Cola izquierda */}
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute -left-1.5 top-[1.5px] h-[calc(100%-1.5px)] w-2 bg-[#e6dac0] border-y border-l border-[#26110a]"
+              className="pointer-events-none absolute -left-2 top-[2px] h-[calc(100%-2px)] w-2.5 bg-[#e8dcc2]"
               style={{
-                clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%, 38% 50%)',
+                clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%, 35% 50%)',
               }}
             />
-            {/* Pliegue triangular izquierdo */}
+            {/* Triángulo marrón izquierdo debajo */}
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute left-0 -bottom-[1.5px] h-[1.5px] w-1.5 bg-[#26110a]"
+              className="pointer-events-none absolute left-0 -bottom-[2px] h-[2px] w-2 bg-[#5c2314]"
               style={{
                 clipPath: 'polygon(0 0, 100% 0, 100% 100%)',
               }}
@@ -153,22 +153,22 @@ export default function Footer() {
             {/* Cola derecha */}
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute -right-1.5 top-[1.5px] h-[calc(100%-1.5px)] w-2 bg-[#e6dac0] border-y border-r border-[#26110a]"
+              className="pointer-events-none absolute -right-2 top-[2px] h-[calc(100%-2px)] w-2.5 bg-[#e8dcc2]"
               style={{
-                clipPath: 'polygon(0 0, 100% 0, 62% 50%, 100% 100%, 0 100%)',
+                clipPath: 'polygon(0 0, 100% 0, 65% 50%, 100% 100%, 0 100%)',
               }}
             />
-            {/* Pliegue triangular derecho */}
+            {/* Triángulo marrón derecho debajo */}
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute right-0 -bottom-[1.5px] h-[1.5px] w-1.5 bg-[#26110a]"
+              className="pointer-events-none absolute right-0 -bottom-[2px] h-[2px] w-2 bg-[#5c2314]"
               style={{
                 clipPath: 'polygon(0 0, 100% 0, 0 100%)',
               }}
             />
 
-            {/* Cuerpo miniatura de la cinta */}
-            <span className="relative z-10 flex flex-col justify-center bg-[#f7edd6] border border-[#26110a] shadow-2xs px-2 py-[2px] group-hover:bg-[#fbf3e1] transition-colors">
+            {/* Cuerpo central limpio sin sombreado sucio */}
+            <span className="relative z-10 flex flex-col justify-center bg-[#f8eed6] px-2.5 py-[2px] group-hover:bg-[#fbf3e1] transition-colors">
               <span
                 aria-hidden="true"
                 className="w-full h-[1px] bg-[#eab308] mb-[1px]"
