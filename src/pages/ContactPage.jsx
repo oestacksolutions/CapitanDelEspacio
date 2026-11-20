@@ -177,7 +177,7 @@ export default function ContactPage() {
                 href="mailto:info@Capitándelespaciomr.com.ar"
                 className="inline-block pt-1 font-semibold text-[#8b1d1d] hover:underline break-all"
               >
-                info@Capitándelespaciomr.com.ar
+                info@capitandelespaciomr.com.ar
               </a>
             </div>
           </div>
